@@ -1,8 +1,4 @@
-const {app, BrowserWindow} = require('electron')
-const electronClient = require('electron-connect').client
-
-const path = require('path')
-const url = require('url')
+const { app, BrowserWindow } = require('electron')
 
 /**
  * Main frame.
@@ -14,10 +10,9 @@ let win
  *
  * @param {int} width
  * @param {int} height
- * @param {string} view
  * @param {boolean} debug
  */
-exports.createWindow = (width, height, view, debug) => {
+exports.createWindow = (width, height, debug) => {
   var frame = new BrowserWindow({
     minWidth: width,
     width: width,
@@ -26,19 +21,13 @@ exports.createWindow = (width, height, view, debug) => {
     frame: false,
     resizable: true,
     show: false,
-    webPreferences: {
-      experimentalFeatures: true
-    },
-    icon: './dist/img/icon.ico'
+    // webPreferences: {
+    //   experimentalFeatures: true
+    // },
+    icon: `file://${__dirname}/dist/favicon.ico`
   })
 
-  if (view !== undefined) {
-    frame.loadURL(url.format({
-      pathname: path.join(__dirname, `dist/views/${view}.html`),
-      protocol: 'file',
-      slashed: true
-    }))
-  }
+  frame.loadURL(`file://${__dirname}/dist/index.html`)
 
   frame.on('close', () => {
     frame = null
@@ -53,8 +42,7 @@ exports.createWindow = (width, height, view, debug) => {
  * Once the application is fully loaded, the index frame is executed.
  */
 app.on('ready', () => {
-  win = exports.createWindow(1000, 600, 'index', true)
-  electronClient.create(win)
+  win = exports.createWindow(1000, 600, true)
 
   /**
      * The window is shown as soos as it's fully loaded.
@@ -67,6 +55,8 @@ app.on('ready', () => {
      * The application will close when window closes event.
      */
   win.on('closed', () => {
-    app.quit()
+    if (process.platform !== 'darwin') {
+      app.quit()
+    }
   })
 })
