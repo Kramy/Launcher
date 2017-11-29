@@ -69,3 +69,31 @@ $breakpoints: (
 /// @example scss - When using a CDN
 ///   $base-url: 'http://cdn.example.com/assets/';
 $base-url: '/assets/' !default;
+
+// Colors
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
+
+$white-10: rgba($white, 0.1);
+$white-20: rgba($white, 0.2);
+$white-30: rgba($white, 0.3);
+$white-50: rgba($white, 0.5);
+
+$black-10: rgba($black, 0.1);
+
+$background-color: rgb(85, 39, 16);
+
+$header-backgraund-color: $white-10;
+$sidebar-background-color: $black-10;
+
+// Frame styles
+$frame-border-width: 1px;
+$frame-border-style: solid;
+$frame-border-color: $white-10;
+$frame-border-top: $frame-border-width $frame-border-style $frame-border-color;
+$frame-border-right: $frame-border-width $frame-border-style $frame-border-color;
+$frame-border-bottom: $frame-border-width $frame-border-style $frame-border-color;
+$frame-border-left: $frame-border-width $frame-border-style $frame-border-color;
+
+$frame-border: $frame-border-width $frame-border-style $black;
+$frame-shadow: inset 0 0 $frame-border-width $white-50;
