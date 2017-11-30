@@ -1,11 +1,18 @@
 @import '~sass/abstracts/variables';
 
+/**
+ * 
+ */
 .frame {
     display: grid;
     grid-template-columns: [start col-1] 1fr [end];
     grid-template-rows: [start row-1] auto [row-2] 1fr [end];
+    height: 100%;
     border: $frame-border;
     box-shadow: $frame-shadow;
+    /**
+    * 
+    */
     > .header {
         display: grid;
         grid-template-columns: [start col-1] 1fr [end];
@@ -15,19 +22,34 @@
         -webkit-app-region: drag;
         user-select: none;
         border-bottom: $frame-border-bottom;
+        /**
+        * 
+        */
         > .top {
             display: grid;
             grid-template-columns: [start col-1] 112px [col-2] 1fr [col-3] 112px [end];
             grid-template-rows: [start row-1] auto [end];
+            /**
+            * 
+            */
             > .left {
                 grid-column: col-1;
             }
+            /**
+            * 
+            */
             > .center {
                 grid-column: col-2;
             }
+            /**
+            * 
+            */
             > .right {
                 grid-column: col-3;
                 text-align: right;
+                /**
+                * 
+                */
                 > .options {
                     display: inline-flex;
                     > li {
@@ -38,42 +60,69 @@
                 }
             }
         }
+        /**
+        * 
+        */
         // > .middle {}
+        /**
+        * 
+        */
         > .bottom {
             grid-column: start / end;
             grid-row: 2;
         }
     }
+    /**
+    * 
+    */
     > .content {
         display: grid;
         grid-template-columns: [start col-1] auto [col-2] 1fr [end];
+        /**
+        * 
+        */
         > .sidebar {
             grid-column: col-1;
             border-right: $frame-border-right;
             background-color: $sidebar-background-color;
         }
+        /**
+        * 
+        */
         > .main {
             grid-column: col-2;
         }
     }
 }
 
+/**
+* 
+*/
 .header-detail {
     border-bottom: $frame-border-bottom;
-    height: 8px;
+    height: 10px;
+    /**
+    * 
+    */
     &::before {
         left: 105px;
         top: 0px;
         transform: rotate(45deg);
     }
+    /**
+    * 
+    */
     &::after {
         right: 105px;
         top: 0px;
         transform: rotate(-45deg);
     }
+    /**
+    * 
+    */
     &::before, &::after {
         width: 12px;
-        height: 6px;
+        height: 8px;
         content: '';
         position: absolute;
         // bottom: 0;
