@@ -46,3 +46,13 @@ ul {
   padding: 0;
   margin: 0;
 }
+
+/**
+ * Application background
+ */
+ .background {
+     background-color: $background-color;
+     // background-image: url('../../../img/bg_2.png');
+     background-position: top center;
+     background-repeat: no-repeat;
+ }
