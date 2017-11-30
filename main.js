@@ -21,9 +21,6 @@ exports.createWindow = (width, height, debug) => {
     frame: false,
     resizable: true,
     show: false,
-    // webPreferences: {
-    //   experimentalFeatures: true
-    // },
     icon: `file://${__dirname}/dist/favicon.ico`
   })
 
