@@ -1,0 +1,21 @@
+@import '~sass/abstracts/variables';
+
+/**
+* 
+*/
+:host(app-frame-content) {
+    display: grid;
+    grid-template-columns: [start col-1] auto [col-2] 1fr [end];
+    grid-template-rows: [start row-1] 1fr [end];
+    > .sidebar {
+        grid-column: col-1;
+        border-right: $frame-border-right;
+        background-color: $sidebar-background-color;
+    }
+    /**
+    * 
+    */
+    > .main {
+        grid-column: col-2;
+    }
+}

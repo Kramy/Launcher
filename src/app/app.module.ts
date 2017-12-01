@@ -4,14 +4,16 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { FrameComponent } from './frame/frame.component';
-import { MainMenuComponent } from './main-menu/main-menu.component';
+import { FrameContentComponent } from './frame-content/frame-content.component';
+import { MenuContentComponent } from './menu-content/menu-content.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FrameComponent,
-    MainMenuComponent
+    FrameContentComponent,
+    MenuContentComponent
   ],
   imports: [
     BrowserModule

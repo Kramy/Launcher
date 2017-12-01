@@ -1,41 +1,26 @@
-<div class="frame">
-  <nav class="header">
-    <div class="top">
-      <div class="left"></div>
-      <div class="center">
-        <div class="header-detail"></div>
-      </div>
-      <div class="right">
-        <ul class="options">
-          <li>
-            <i>m</i>
-          </li>
-          <li>
-            <i>M</i>
-          </li>
-          <li>
-            <i>C</i>
-          </li>
-        </ul>
-      </div>
+<nav class="header">
+  <div class="top">
+    <div class="left"></div>
+    <div class="center">
+      <div class="header-detail"></div>
     </div>
-    <div class="bottom">
-      <ng-content select="[main-menu]"></ng-content>
-    </div>
-  </nav>
-  <main class="content">
-    <div class="sidebar">menu lateral</div>
-    <div class="main">
-      cuerpo
-      <ul>
+    <div class="right">
+      <ul class="options">
         <li>
-          imagen configuracion
+          <i>m</i>
         </li>
         <li>
-          añadir app
+          <i>M</i>
+        </li>
+        <li>
+          <i>C</i>
         </li>
       </ul>
     </div>
-  </main>
-</div>
+  </div>
+  <div class="bottom">
+    <ng-content select="[menu-content]"></ng-content>
+  </div>
+</nav>
+<ng-content select="[frame-content]"></ng-content>
   
