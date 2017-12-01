@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { FrameComponent } from './frame/frame.component';
 import { FrameContentComponent } from './frame-content/frame-content.component';
 import { MenuContentComponent } from './menu-content/menu-content.component';
+import { GamesComponent } from './games/games.component';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { MenuContentComponent } from './menu-content/menu-content.component';
     AppComponent,
     FrameComponent,
     FrameContentComponent,
-    MenuContentComponent
+    MenuContentComponent,
+    GamesComponent
   ],
   imports: [
     BrowserModule

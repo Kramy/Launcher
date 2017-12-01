@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./frame-content.component.scss']
 })
 export class FrameContentComponent implements OnInit {
+  games: boolean = true;
 
   constructor() { }
 
