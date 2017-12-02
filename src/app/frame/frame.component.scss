@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: [start col-1] 1fr [end];
     grid-template-rows: [start row-1] auto [row-2] 1fr [end];
-    height: 100%;
+    min-height: 100%;
     border: $frame-border;
     box-shadow: $frame-shadow;
     /**
