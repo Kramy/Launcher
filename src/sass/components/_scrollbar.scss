@@ -2,41 +2,45 @@
 // This file contains all styles related to the scrollbar component.
 // -----------------------------------------------------------------------------
 
-/*
- *
+/**
+ * Barra de desplazamiento.
  */
 *::-webkit-scrollbar {
-    // width: 7px;
-    width: 4px;
+    width: 7px;
 }
 
-/*
- *
+/**
+ * Botones de desplazamiento.
  */
 *::-webkit-scrollbar-button {}
 
-/*
- *
+/**
+ * Pista de desplazamiento total.
  */
 *::-webkit-scrollbar-track {}
 
-/*
- *
+/**
+ * Pista de desplazamiento vacía.
  */
 *::-webkit-scrollbar-track-piece {}
 
-/*
- *
+/**
+ * Elemento de desplazamiento.
  */
 *::-webkit-scrollbar-thumb {
-    // border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.1);
     &:hover {
-        background-color: rgba(255, 255, 255, 0.4);
+        background-color: rgba(255, 255, 255, 0.2);
     }
 }
 
-/*
- *
+/**
+ * Esquina de corte con scroll horizontal y vertical.
  */       
 *::-webkit-scrollbar-corner {}
+
+/**
+ * 
+ */
+*:::-webkit-resizer {}
