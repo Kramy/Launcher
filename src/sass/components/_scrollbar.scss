@@ -1,0 +1,42 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the scrollbar component.
+// -----------------------------------------------------------------------------
+
+/*
+ *
+ */
+*::-webkit-scrollbar {
+    // width: 7px;
+    width: 4px;
+}
+
+/*
+ *
+ */
+*::-webkit-scrollbar-button {}
+
+/*
+ *
+ */
+*::-webkit-scrollbar-track {}
+
+/*
+ *
+ */
+*::-webkit-scrollbar-track-piece {}
+
+/*
+ *
+ */
+*::-webkit-scrollbar-thumb {
+    // border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.2);
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+/*
+ *
+ */       
+*::-webkit-scrollbar-corner {}

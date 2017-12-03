@@ -25,48 +25,56 @@
         * 
         */
         > .categories {
-            padding-top: 26px;
+            padding-top: 5px;
+            overflow: auto;
+            height: calc(100vh - 30px - 96px);
             /**
             * 
             */
             > .category {
-                color: rgba(255, 255, 255, 0.8);
-                padding: 0 20px;
-            }
-            /**
-            * 
-            */
-            > .games {
-                // height: calc(100vh - 127px);
-                overflow: auto;
+                padding: 21px 0 0;
                 /**
                 * 
                 */
-                > .game {
-                    // color: rgba(255, 255, 255, 0.5);
-                    padding: 13px 20px 12px 20px;
-                    border-left: 3px solid transparent;
-                    // user-select: none;
+                > .title {
+                    padding: 0 20px;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+                /**
+                * 
+                */
+                > .games {
+                    // height: calc(100vh - 127px);
+                    // overflow: auto;
                     /**
                     * 
                     */
-                    &:hover {
-                        background-color: rgba(255, 255, 255, 0.05);
-                        border-left: 3px solid rgba(255,255,255,0.5);
-                    }
-                    /**
-                    * 
-                    */
-                    &:hover, &:focus {
-                        color: rgba(255, 255, 255, 0.8);
-                    }
-                    /**
-                    * 
-                    */
-                    &:focus,
-                    &:active {
-                        background-color: rgba(255, 255, 255, 0.1);
-                        border-left: 3px solid rgba(255, 255, 255, 0.8);
+                    > .game {
+                        // color: rgba(255, 255, 255, 0.5);
+                        padding: 13px 20px 12px 20px;
+                        border-left: 3px solid transparent;
+                        // user-select: none;
+                        /**
+                        * 
+                        */
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.05);
+                            border-left: 3px solid rgba(255,255,255,0.5);
+                        }
+                        /**
+                        * 
+                        */
+                        &:hover, &:focus {
+                            color: rgba(255, 255, 255, 0.8);
+                        }
+                        /**
+                        * 
+                        */
+                        &:focus,
+                        &:active {
+                            background-color: rgba(255, 255, 255, 0.1);
+                            border-left: 3px solid rgba(255, 255, 255, 0.8);
+                        }
                     }
                 }
             }
