@@ -7,7 +7,7 @@ import { FrameComponent } from './frame/frame.component';
 import { FrameContentComponent } from './frame-content/frame-content.component';
 import { MenuContentComponent } from './menu-content/menu-content.component';
 import { GamesComponent } from './games/games.component';
-
+import { NgxElectronModule } from "ngx-electron";
 
 @NgModule({
   declarations: [
@@ -18,9 +18,10 @@ import { GamesComponent } from './games/games.component';
     GamesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgxElectronModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

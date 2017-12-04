@@ -79,8 +79,8 @@
 * 
 */
 .header-detail {
-    border-bottom: $frame-border-bottom;
     height: 10px;
+    border-top: 1px solid transparent;
     /**
     * 
     */
@@ -105,7 +105,48 @@
         height: 8px;
         content: '';
         position: absolute;
-        // bottom: 0;
         border-bottom: $frame-border-bottom;
+    }
+    /**
+    * 
+    */
+    > div {
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &::before {
+            left: 104px;
+            top: 0px;
+            transform: rotate(45deg);
+        }
+        /**
+        * 
+        */
+        &::after {
+            right: 104px;
+            top: 0px;
+            transform: rotate(-45deg);
+        }
+        /**
+        * 
+        */
+        &::before, &::after {
+            width: 12px;
+            height: 8px;
+            content: '';
+            position: absolute;
+            border-right: 7px solid transparent;
+            border-bottom: 7px solid rgba(0, 0, 0, 0.1);
+            border-left: 7px solid transparent;
+        }
+        /**
+        * 
+        */
+        &.selected {
+            background-color: rgba(255, 255, 255, 0.1);
+            &::before, &::after {
+                border-bottom: 7px solid rgba(255, 255, 255, 0.1);
+            }
+        }
     }
 }

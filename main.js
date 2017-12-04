@@ -30,6 +30,14 @@ exports.createWindow = (width, height, debug) => {
     frame = null
   })
 
+  frame.on('focus', () => {
+    frame.webContents.send("focus");
+  })
+
+  frame.on('blur', () => {
+    frame.webContents.send("blur");
+  })
+
   if (debug) frame.webContents.openDevTools()
 
   return frame
