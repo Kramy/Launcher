@@ -1,7 +1,12 @@
 /**
- * Basic typography style for copy text
+ * Basic typography styles
  */
 body {
   color: $text-color;
-  font: normal 125% / 1.4 $text-font-stack;
+  // font-style: ;
+  // font-variant: ;
+  // font-weight: ;
+  // font-size: ;
+  // line-height: ;
+  font-family: "Verdana, Geneva, sans-serif";
 }
