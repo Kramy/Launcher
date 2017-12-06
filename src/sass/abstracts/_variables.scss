@@ -2,14 +2,6 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 
-/// Copy text color
-/// @type Color
-$text-color: rgb(34, 34, 34) !default;
-
-/// Main brand color
-/// @type Color
-$brand-color: rgb(229, 0, 80) !default;
-
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
@@ -25,16 +17,23 @@ $base-url: '/assets/' !default;
 /// @type Color
 $black: rgb(0, 0, 0);
 $white: rgb(255, 255, 255);
+$brown: rgb(85, 39, 16);
+$yellow: rgb(254, 225, 2);
 
-$white-10: rgba($white, 0.1);
-$white-20: rgba($white, 0.2);
-$white-30: rgba($white, 0.3);
-$white-50: rgba($white, 0.5);
+$white-10: rgba($white, 0.10);
+$white-20: rgba($white, 0.20);
+$white-30: rgba($white, 0.30);
+$white-50: rgba($white, 0.50);
+$white-80: rgba($white, 0.80);
+$white-90: rgba($white, 0.90);
 
 $black-10: rgba($black, 0.1);
 
-// $background-color: rgb(85, 39, 16);
-$background-color: rgb(111, 94, 66);
+$yellow-50: rgba($yellow, 0.5);
+$yellow-80: rgba($yellow, 0.8);
+
+$background-color: $brown;
+// $background-color: rgb(111, 94, 66);
 
 $header-backgraund-color: $white-10;
 $sidebar-background-color: $black-10;

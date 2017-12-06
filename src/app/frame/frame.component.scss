@@ -22,6 +22,9 @@
         -webkit-app-region: drag;
         user-select: none;
         border-bottom: $frame-border-bottom;
+        > * {
+            -webkit-app-region: no-drag;
+        }
         /**
         * 
         */
@@ -53,8 +56,17 @@
                 > .options {
                     display: inline-flex;
                     > li {
+                        padding: 10px 8px;
+                        font-size: 12px;
+                        color: $white-20;
+                        &:last-child {
+                            padding-right: 12px;
+                        }
+                        &:hover {
+                            color: $white-50;
+                        }
                         > i {
-                            -webkit-app-region: no-drag;
+                            // -webkit-app-region: no-drag;
                         }
                     }
                 }
@@ -112,8 +124,8 @@
     */
     > div {
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background-color: $black-10;
+        border-bottom: 1px solid $white-10;
         &::before {
             left: 104px;
             top: 0px;
@@ -136,16 +148,16 @@
             content: '';
             position: absolute;
             border-right: 7px solid transparent;
-            border-bottom: 7px solid rgba(0, 0, 0, 0.1);
+            border-bottom: 7px solid $black-10;
             border-left: 7px solid transparent;
         }
         /**
         * 
         */
         &.selected {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: $white-10;
             &::before, &::after {
-                border-bottom: 7px solid rgba(255, 255, 255, 0.1);
+                border-bottom: 7px solid $white-10;
             }
         }
     }

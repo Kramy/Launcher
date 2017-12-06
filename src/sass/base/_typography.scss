@@ -1,12 +1,30 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide typography styles.
+// -----------------------------------------------------------------------------
+
 /**
- * Basic typography styles
+ * 
  */
 body {
-  color: $text-color;
+  color: $white-50;
   // font-style: ;
   // font-variant: ;
-  // font-weight: ;
-  // font-size: ;
+  // font-weight: 400;
+  font-size: 1rem;
   // line-height: ;
-  font-family: "Verdana, Geneva, sans-serif";
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+}
+
+/**
+ * 
+ */
+.selected {
+  color: $white-80;
+}
+
+/**
+ * 
+ */
+.disabled {
+  color: $white-20;
 }

@@ -28,15 +28,14 @@ html, body {
 /**
  * Basic styles for links
  */
-a {
-  color: $brand-color;
-  text-decoration: none;
+// a {
+//   color: $yellow-50;
+//   text-decoration: none;
 
-  @include on-event {
-    color: $text-color;
-    text-decoration: underline;
-  }
-}
+//   @include on-event {
+//     color: $yellow-80;
+//   }
+// }
 
 /**
  * Basic styles for lists

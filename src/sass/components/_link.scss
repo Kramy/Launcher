@@ -1,0 +1,22 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the link component.
+// -----------------------------------------------------------------------------
+
+/**
+ * 
+ */
+ a {
+    color: $white-50;
+    text-decoration: none;
+  
+    @include on-event {
+      color: $white-80;
+    }
+    &.yellow {
+        color: $yellow-50;
+        
+        @include on-event {
+          color: $yellow-80;
+        }
+    }
+  }
