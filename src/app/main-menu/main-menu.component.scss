@@ -1,5 +1,21 @@
 @import '~sass/abstracts/variables';
 
-.prueba {
-    color: red;
+.main-menu {
+    > ul {
+        display: inline-flex;
+        cursor: default;
+        margin: 0 12px 13px 16px;
+        > li {
+            font-size: 20px;
+            -webkit-app-region: no-drag;
+            // padding: 3px 0px;
+            // margin: 0px 14px;
+            &.config {
+                padding: 10px;
+            }
+            &:hover {
+                color: $white-80;
+            }
+        }
+    }
 }

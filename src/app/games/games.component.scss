@@ -33,7 +33,6 @@
             */
             > .category {
                 padding: 21px 0 0;
-                cursor: default;
                 user-select: none;
                 /**
                 * 
@@ -46,6 +45,7 @@
                 * 
                 */
                 > .games {
+                    cursor: default;
                     /**
                     * 
                     */
