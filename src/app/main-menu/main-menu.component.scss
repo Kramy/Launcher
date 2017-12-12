@@ -4,10 +4,11 @@
     > ul {
         display: inline-flex;
         cursor: default;
-        margin: -10px 12px 13px 16px;
+        margin: 0px 12px 7px 16px;
         > li {
-            font-size: 20px;
+            font-size: 1.30rem;
             -webkit-app-region: no-drag;
+            text-transform: uppercase;
             // padding: 3px 0px;
             // margin: 0px 14px;
             &:hover {
@@ -16,7 +17,7 @@
             &.config {
                 padding: 10px 20px 10px 10px;
                 &:hover {
-                    text-shadow: 0 0 20px white;
+                    text-shadow: 0 0 20px $white;
                 }
                 > i {
                     padding: 0 5px;
@@ -25,9 +26,10 @@
             &.option {
                 transition: color 0.5s;
                 margin: 10px;
+                line-height: 1;
             }
             &.selected {
-                text-shadow: 0 0 20px white;
+                text-shadow: 0 0 20px $white;
             }
         }
     }
