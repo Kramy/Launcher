@@ -9,6 +9,7 @@ import { GamesComponent } from './games/games.component';
 import { NgxElectronModule } from "ngx-electron";
 import { FrameHeaderComponent } from './frame-header/frame-header.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
+import { FrameManagerService } from './services/electron/frame-manager.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,11 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     BrowserModule,
     NgxElectronModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    FrameManagerService
+  ],
+  bootstrap: [
+    AppComponent
+  ]
 })
 export class AppModule {}

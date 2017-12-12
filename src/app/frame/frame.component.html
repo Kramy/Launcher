@@ -8,13 +8,13 @@
     </div>
     <div class="right">
       <ul class="options">
-        <li class="option">
+        <li class="option" (click)="minimize()">
           <i class="fa fa-window-minimize" aria-hidden="true"></i>
         </li>
-        <li class="option">
+        <li class="option" (click)="resize()">
           <i class="fa fa-window-maximize" aria-hidden="true"></i>
         </li>
-        <li class="option">
+        <li class="option" (click)="close()">
           <i class="fa fa-times" aria-hidden="true"></i>
         </li>
       </ul>

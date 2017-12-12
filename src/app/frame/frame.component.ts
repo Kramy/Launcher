@@ -1,5 +1,6 @@
 import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ElectronService } from 'ngx-electron';
+import { FrameManagerService } from '../services/electron/frame-manager.service';
 
 @Component({
   selector: 'app-frame',
@@ -9,23 +10,47 @@ import { ElectronService } from 'ngx-electron';
 export class FrameComponent implements OnInit {
 
   public focus: boolean;
-  // public text: string;
 
-  constructor(private electronService: ElectronService, private ref: ChangeDetectorRef) {
+  constructor(
+    // private electronService: ElectronService,
+    private frameManagerService: FrameManagerService,
+    private ref: ChangeDetectorRef,
+  ) {
     this.focus = true;
     
-    this.electronService.ipcRenderer.on("focus", () => {
-      this.focus = true;
-      ref.detectChanges();
-    });
+    // this.electronService.ipcRenderer.on("focus", () => {
+    //   this.focus = true;
+    //   ref.detectChanges();
+    // });
 
-    this.electronService.ipcRenderer.on("blur", () => {
-      this.focus = false;
-      ref.detectChanges();
-    });
+    // this.electronService.ipcRenderer.on("blur", () => {
+    //   this.focus = false;
+    //   ref.detectChanges();
+    // });
+    
   }
 
   ngOnInit() {
+  }
+
+  public minimize() {
+    this.frameManagerService.minimize();
+  }
+
+  public resize() {
+    this.frameManagerService.resize();
+  }
+  
+  // public maximize() {
+  //   this.frameManagerService.maximize();
+  // }
+
+  // public unmaximize() {
+  //   this.frameManagerService.unmaximize();
+  // }
+
+  public close() {
+    this.frameManagerService.close();
   }
 
 }

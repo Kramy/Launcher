@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron')
 
 /**
  * Main frame.
@@ -37,11 +37,28 @@ exports.createWindow = (width, height, debug) => {
   frame.on('blur', () => {
     frame.webContents.send("blur");
   })
-
+  
   if (debug) frame.webContents.openDevTools()
 
   return frame
 }
+
+ipcMain.on("minimize", (event) => {
+  BrowserWindow.fromWebContents(event.sender).minimize();
+});
+
+ipcMain.on("resize", (event) => {
+  if (BrowserWindow.fromWebContents(event.sender).isMaximized()) {
+    BrowserWindow.fromWebContents(event.sender).maximize();
+  } else {
+    BrowserWindow.fromWebContents(event.sender).unmaximize();
+  }
+});
+
+ipcMain.on("close", (event) => {
+  BrowserWindow.fromWebContents(event.sender).close();
+});
+
 
 /**
  * Once the application is fully loaded, the index frame is executed.
