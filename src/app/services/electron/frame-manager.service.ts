@@ -14,14 +14,6 @@ export class FrameManagerService {
     this.electronService.ipcRenderer.send("resize");
   }
 
-  // public maximize() {
-  //   this.electronService.ipcRenderer.send("maximize");
-  // }
-
-  // public unmaximize() {
-  //   this.electronService.ipcRenderer.send("unmaximize");
-  // }
-
   public close() {
     this.electronService.ipcRenderer.send("close");
   }

@@ -43,18 +43,27 @@ exports.createWindow = (width, height, debug) => {
   return frame
 }
 
+/**
+ * 
+ */
 ipcMain.on("minimize", (event) => {
   BrowserWindow.fromWebContents(event.sender).minimize();
 });
 
+/**
+ * 
+ */
 ipcMain.on("resize", (event) => {
   if (BrowserWindow.fromWebContents(event.sender).isMaximized()) {
-    BrowserWindow.fromWebContents(event.sender).maximize();
-  } else {
     BrowserWindow.fromWebContents(event.sender).unmaximize();
+  } else {
+    BrowserWindow.fromWebContents(event.sender).maximize();
   }
 });
 
+/**
+ * 
+ */
 ipcMain.on("close", (event) => {
   BrowserWindow.fromWebContents(event.sender).close();
 });

@@ -12,21 +12,21 @@ export class FrameComponent implements OnInit {
   public focus: boolean;
 
   constructor(
-    // private electronService: ElectronService,
+    private electronService: ElectronService,
     private frameManagerService: FrameManagerService,
     private ref: ChangeDetectorRef,
   ) {
     this.focus = true;
     
-    // this.electronService.ipcRenderer.on("focus", () => {
-    //   this.focus = true;
-    //   ref.detectChanges();
-    // });
+    this.electronService.ipcRenderer.on("focus", () => {
+      this.focus = true;
+      ref.detectChanges();
+    });
 
-    // this.electronService.ipcRenderer.on("blur", () => {
-    //   this.focus = false;
-    //   ref.detectChanges();
-    // });
+    this.electronService.ipcRenderer.on("blur", () => {
+      this.focus = false;
+      ref.detectChanges();
+    });
     
   }
 
@@ -41,14 +41,6 @@ export class FrameComponent implements OnInit {
     this.frameManagerService.resize();
   }
   
-  // public maximize() {
-  //   this.frameManagerService.maximize();
-  // }
-
-  // public unmaximize() {
-  //   this.frameManagerService.unmaximize();
-  // }
-
   public close() {
     this.frameManagerService.close();
   }
