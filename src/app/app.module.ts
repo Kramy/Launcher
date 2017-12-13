@@ -10,6 +10,7 @@ import { NgxElectronModule } from "ngx-electron";
 import { FrameHeaderComponent } from './frame-header/frame-header.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FrameManagerService } from './services/electron/frame-manager.service';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FrameManagerService } from './services/electron/frame-manager.service';
     FrameContentComponent,
     GamesComponent,
     FrameHeaderComponent,
-    MainMenuComponent
+    MainMenuComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
