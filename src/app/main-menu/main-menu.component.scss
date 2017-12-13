@@ -31,7 +31,6 @@ nav {
             > a {
                 cursor: default;
                 &.selected {
-                    color: $white;
                     text-shadow: 0 0 20px $white;
                 }
             }

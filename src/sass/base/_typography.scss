@@ -27,4 +27,5 @@ body {
  */
 .disabled {
   color: $white-20;
+  pointer-events: none;
 }
