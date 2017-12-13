@@ -1,6 +1,6 @@
 @import '~sass/abstracts/variables';
 
-.main-menu {
+nav {
     > ul {
         display: inline-flex;
         cursor: default;
@@ -28,8 +28,12 @@
                 margin: 10px;
                 line-height: 1;
             }
-            &.selected {
-                text-shadow: 0 0 20px $white;
+            > a {
+                cursor: default;
+                &.selected {
+                    color: $white;
+                    text-shadow: 0 0 20px $white;
+                }
             }
         }
     }

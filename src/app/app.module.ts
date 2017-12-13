@@ -11,6 +11,7 @@ import { FrameHeaderComponent } from './frame-header/frame-header.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { FrameManagerService } from './services/electron/frame-manager.service';
 import { NewsComponent } from './news/news.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NewsComponent } from './news/news.component';
   ],
   imports: [
     BrowserModule,
-    NgxElectronModule
+    NgxElectronModule,
+    AppRoutingModule
   ],
   providers: [
     FrameManagerService
