@@ -24,20 +24,20 @@
         * 
         */
         > .categories {
-            padding-top: 8px;
+            padding: 5px 0;
             overflow: auto;
             height: calc(100vh - 30px - 96px);
             /**
             * 
             */
             > .category {
-                padding: 21px 0 3px 0;
+                padding: 20px 0 0 0;
                 user-select: none;
                 /**
                 * 
                 */
                 > .title {
-                    padding: 0 20px;
+                    padding: 3px 20px;
                     color: $white;
                     text-transform: uppercase;
                 }
@@ -50,7 +50,7 @@
                     * 
                     */
                     > .game {
-                        padding: 14px 20px;
+                        padding: 15px 20px;
                         border-left: 3px solid transparent;
                         /**
                         * 
