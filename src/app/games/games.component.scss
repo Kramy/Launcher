@@ -37,9 +37,15 @@
                 * 
                 */
                 > .title {
-                    padding: 3px 20px;
+                    margin: 0 18px;
+                    padding: 2px 0 3px 0;
+                    border-top: 1px solid transparent;
                     color: $white;
                     text-transform: uppercase;
+                    // &.hidden {
+                    //     color: transparent;
+                    //     border-top: 1px solid $white-20;
+                    // }
                 }
                 /**
                 * 
@@ -50,7 +56,9 @@
                     * 
                     */
                     > .game {
-                        padding: 15px 20px;
+                        display: flex;
+                        align-items: center;
+                        padding: 8px 19px;
                         border-left: 3px solid transparent;
                         /**
                         * 
@@ -72,6 +80,14 @@
                         &:active {
                             background-color: $white-10;
                             border-left: 3px solid $white;
+                        }
+                        > .icon {
+                            height: 28px;
+                            width: 28px;
+                            background-size: contain;
+                        }
+                        > .name {
+                            margin-left: 9px;
                         }
                     }
                 }
