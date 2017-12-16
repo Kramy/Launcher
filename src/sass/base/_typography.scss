@@ -19,13 +19,13 @@ body {
  * 
  */
 .selected {
-  color: $white;
+  color: $white !important;
 }
 
 /**
  * 
  */
 .disabled {
-  color: $white-20;
+  color: $white-20 !important;
   pointer-events: none;
 }

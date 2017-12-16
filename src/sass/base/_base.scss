@@ -26,18 +26,6 @@ html, body {
 }
 
 /**
- * Basic styles for links
- */
-// a {
-//   color: $yellow-50;
-//   text-decoration: none;
-
-//   @include on-event {
-//     color: $yellow-80;
-//   }
-// }
-
-/**
  * Basic styles for lists
  */
 ul {
@@ -51,14 +39,13 @@ ul {
  */
 .background {
     background-color: $background-color;
-    // background-image: url('../../../img/bg_2.png');
     background-position: top center;
     background-repeat: no-repeat;
 }
  
- /**
-  *
-  */
+/**
+ *
+ */
 .hidden {
   display: none;
 }

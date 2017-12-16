@@ -9,8 +9,6 @@ nav {
             font-size: 1.30rem;
             -webkit-app-region: no-drag;
             text-transform: uppercase;
-            // padding: 3px 0px;
-            // margin: 0px 14px;
             &:hover {
                 color: $white-80;
             }
@@ -18,18 +16,20 @@ nav {
                 padding: 10px 20px 10px 10px;
                 &:hover {
                     text-shadow: 0 0 20px $white;
+                    color: $white-80;
                 }
                 > i {
                     padding: 0 5px;
                 }
             }
             &.option {
-                transition: color 0.5s;
+                // transition: color 0.5s;
                 margin: 10px;
                 line-height: 1;
             }
             > a {
                 cursor: default;
+                // color: inherit;
                 &.selected {
                     text-shadow: 0 0 20px $white;
                 }

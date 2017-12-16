@@ -2,43 +2,54 @@
   <div class="categories">
     <div class="category">
       <div class="title">World of Warcraft</div>
-      <ul class="games">
-        <li class="game">
-          
-          <img [src]="icon" class="icon" />
-          <span class="name hidden">Classic</span>
+      <ul>
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Classic</a>
         </li>
-        <!-- <li class="game">
-          <img [src]="icon" class="icon" />The Burning Crusade
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">The Burning Crusade</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />Wrath of the Lich King
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Wrath of the Lich King</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />Cataclysm
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Cataclysm</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />Mists of Pandaria
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Mists of Pandaria</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />Warlords of Draenor
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Warlords of Draenor</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />Legion
-        </li> -->
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Legion</a>
+        </li>
       </ul>
     </div>
-    <!-- <div class="category">
-      <div class="title hidden">Otros</div>
-      <ul class="games">
-        <li class="game">
-          <img [src]="icon" class="icon" />Diable III
+    <div class="category">
+      <div class="title">Otros</div>
+      <ul>
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Diablo III</a>
         </li>
-        <li class="game">
-          <img [src]="icon" class="icon" />StarCraft II
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">StarCraft II</a>
+        </li>
+        <li>
+          <img [src]="icon" />
+          <a href="#" [ngClass]="{'hidden': minimized}">Heroes of the Storm</a>
         </li>
       </ul>
-    </div> -->
+    </div>
   </div>
   <div class="footer">X</div>
 </div>
@@ -52,10 +63,13 @@
       añadir app
     </li>
     <li>
-      <a href="">enlace normal</a>
+      <a href="#">enlace normal</a>
     </li>
     <li>
-      <a class="yellow" href="">enlace amarillo</a>
+      <a class="white" href="#">enlace blanco</a>
+    </li>
+    <li>
+      <a class="yellow" href="#">enlace amarillo</a>
     </li>
   </ul>
 </div>

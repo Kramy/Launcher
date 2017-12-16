@@ -50,12 +50,12 @@
                 /**
                 * 
                 */
-                > .games {
+                > ul {
                     cursor: default;
                     /**
                     * 
                     */
-                    > .game {
+                    > li {
                         display: flex;
                         align-items: center;
                         padding: 8px 19px;
@@ -65,12 +65,6 @@
                         */
                         &:hover {
                             background-color: rgba(255, 255, 255, 0.05);
-                            border-left: 3px solid $white-50;
-                        }
-                        /**
-                        * 
-                        */
-                        &:hover, &:focus {
                             color: $white-80;
                         }
                         /**
@@ -78,16 +72,18 @@
                         */
                         &:focus,
                         &:active {
+                            color: $white;
                             background-color: $white-10;
                             border-left: 3px solid $white;
                         }
-                        > .icon {
+                        > img {
                             height: 28px;
                             width: 28px;
                             background-size: contain;
                         }
-                        > .name {
+                        > a {
                             margin-left: 9px;
+                            cursor: default;
                         }
                     }
                 }

@@ -6,9 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./games.component.scss']
 })
 export class GamesComponent implements OnInit {
+  public minimized: boolean;
+  
   public icon: string = "assets/img/game.png";
 
-  constructor() { }
+  constructor() {
+    this.minimized = false;
+  }
 
   ngOnInit() {
   }
