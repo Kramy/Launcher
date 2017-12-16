@@ -1,7 +1,7 @@
 <div class="sidebar">
   <div class="categories">
     <div class="category">
-      <div class="title">World of Warcraft</div>
+      <div class="title" [ngClass]="{'hide': minimized}">World of Warcraft</div>
       <ul>
         <li>
           <img [src]="icon" />
@@ -34,7 +34,7 @@
       </ul>
     </div>
     <div class="category">
-      <div class="title">Otros</div>
+      <div class="title" [ngClass]="{'hide': minimized}">Otros</div>
       <ul>
         <li>
           <img [src]="icon" />
