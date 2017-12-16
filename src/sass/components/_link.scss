@@ -8,10 +8,9 @@
  a {
     color: inherit;
     text-decoration: none;
-    transition: color 0.5s;
   
     @include on-event {
-      color: $white-80;
+      color: inherit;
     }
     /*
      *
