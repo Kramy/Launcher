@@ -23,6 +23,8 @@ html, body {
 *::before,
 *::after {
   box-sizing: inherit;
+  user-select: none;
+  cursor: default;
 }
 
 /**
@@ -53,6 +55,7 @@ ul {
 /**
  *
  */
+a,
 img {
   -webkit-user-drag: none;
 }

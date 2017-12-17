@@ -8,18 +8,15 @@
  a {
     color: inherit;
     text-decoration: none;
-    -webkit-user-drag: none;
-  
-    @include on-event {
-      color: inherit;
-    }
+    cursor: pointer;
     /*
      *
      */
     &.white {
       color: $white-80;
-
-      @include on-event {
+      &:hover,
+      &:active,
+      &:focus {
         color: $white;
       }
     }
@@ -28,8 +25,9 @@
      */
     &.yellow {
         color: $yellow-80;
-        
-        @include on-event {
+        &:hover,
+        &:active,
+        &:focus {
           color: $yellow;
         }
     }

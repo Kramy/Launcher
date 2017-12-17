@@ -3,31 +3,31 @@
     <div class="category">
       <div class="title" [ngClass]="{'hide': minimized}">World of Warcraft</div>
       <ul>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Classic</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">The Burning Crusade</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Wrath of the Lich King</a>
         </li>
-        <li class="selected">
+        <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Cataclysm</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Mists of Pandaria</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Warlords of Draenor</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Legion</a>
         </li>
@@ -36,15 +36,15 @@
     <div class="category">
       <div class="title" [ngClass]="{'hide': minimized}">Otros</div>
       <ul>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Diablo III</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g9'}" (click)="selectItem('g9')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">StarCraft II</a>
         </li>
-        <li>
+        <li [ngClass]="{'selected': itemSelected == 'g10'}" (click)="selectItem('g10')">
           <img [src]="icon" />
           <a [ngClass]="{'hidden': minimized}">Heroes of the Storm</a>
         </li>

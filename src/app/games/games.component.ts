@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GamesComponent implements OnInit {
   public minimized: boolean;
-  
+  public itemSelected: string = "";
+
   public icon: string = "assets/img/game.png";
 
   constructor() {
@@ -15,6 +16,11 @@ export class GamesComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.itemSelected = "g1";
+  }
+
+  public selectItem(item: string) {
+    this.itemSelected = item;
   }
 
 }

@@ -7,10 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainMenuComponent implements OnInit {
   public logo: string = "assets/img/logo.png";
+  public itemSelected: string = "games";
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  public selectItem(item: string) {
+    console.log(item);
+    this.itemSelected = item;
+  }
 }
