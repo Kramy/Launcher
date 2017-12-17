@@ -8,6 +8,7 @@
  a {
     color: inherit;
     text-decoration: none;
+    -webkit-user-drag: none;
   
     @include on-event {
       color: inherit;
