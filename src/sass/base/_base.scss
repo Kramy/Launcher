@@ -42,10 +42,17 @@ ul {
     background-position: top center;
     background-repeat: no-repeat;
 }
- 
+
 /**
  *
  */
 .hidden {
   display: none;
+}
+
+/**
+ *
+ */
+img {
+  -webkit-user-drag: none;
 }

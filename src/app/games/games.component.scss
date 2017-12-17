@@ -24,7 +24,7 @@
         * 
         */
         > .categories {
-            padding: 5px 0;
+            padding: 5px 0 0 1px;
             overflow: auto;
             height: calc(100vh - 30px - 96px);
             /**
@@ -59,7 +59,7 @@
                     > li {
                         display: flex;
                         align-items: center;
-                        padding: 8px 19px;
+                        padding: 8px 18px;
                         border-left: 3px solid transparent;
                         /**
                         * 
@@ -71,6 +71,7 @@
                         /**
                         * 
                         */
+                        &.selected,
                         &:focus,
                         &:active {
                             color: $white;
@@ -78,14 +79,15 @@
                             border-left: 3px solid $white;
                         }
                         > img {
-                            height: 28px;
+                            height: 100%;
                             width: 28px;
                             background-size: contain;
                         }
                         > a {
-                            margin-left: 9px;
+                            margin: 0 10px;
                             cursor: default;
                             transition: none;
+                            white-space: nowrap;
                         }
                     }
                 }
