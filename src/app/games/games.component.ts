@@ -13,7 +13,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       state('hide', style({
         width: "68px"
       })),
-      transition('show => hide', animate('300ms ease-out'))
+      transition('show => hide', animate('250ms ease-out'))
     ]),
     trigger('show', [
       state('hide', style({
@@ -22,7 +22,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
       state('show', style({
         width: "100%"
       })),
-      transition('hide => show', animate('300ms ease-in'))
+      transition('hide => show', animate('250ms ease-in'))
     ])
   ]
 })
@@ -54,19 +54,15 @@ export class GamesComponent implements OnInit {
     this.state = (this.state === "show" ? "hide" : "show");
   }
 
-  public hideStart(): void {
-    this.hideCategoryTitles = this.state === 'hide';
-  }
+  public hideStart(): void {}
   
   public hideDone(): void {
     this.hideGameNames = this.state === 'hide';
   }
 
-  public showStart(): void {
-    this.hideGameNames = this.state === 'hide';
-  }
+  public showStart(): void {}
   
   public showDone(): void {
-    // this.hideCategoryTitles = this.state === 'hide';
+    this.hideCategoryTitles = this.state === 'hide';
   }
 }
