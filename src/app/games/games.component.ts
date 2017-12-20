@@ -6,29 +6,39 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss'],
   animations: [
-    trigger('toggle', [
+    trigger('hide', [
+      state('show', style({
+        width: "100%"
+      })),
       state('hide', style({
-        width: "80px"
-        // 'background-color': 'red'
+        width: "68px"
+      })),
+      transition('show => hide', animate('300ms ease-out'))
+    ]),
+    trigger('show', [
+      state('hide', style({
+        width: "68px"
       })),
       state('show', style({
-        width: "250px"
-        // 'background-color': 'yellow'
+        width: "100%"
       })),
-      transition('show <=> hide', animate('1s ease-in-out'))
+      transition('hide => show', animate('300ms ease-in'))
     ])
   ]
 })
 export class GamesComponent implements OnInit {
   public state: string;
-  public itemSelected: string = "";
-  public textHide: boolean;
+  public hideGameNames: boolean;
+  public hideCategoryTitles: boolean;
+
+  public itemSelected: string;
 
   public icon: string = "assets/img/game.png";
 
   constructor() {
     this.state = "show";
-    this.textHide = false;
+    this.hideGameNames = true;
+    this.hideCategoryTitles = true;
   }
 
   ngOnInit() {
@@ -39,16 +49,24 @@ export class GamesComponent implements OnInit {
     this.itemSelected = item;
   }
 
-  public animateMe() {
+  public toggle() {
     console.log(this.state);
     this.state = (this.state === "show" ? "hide" : "show");
   }
 
-  // public animationDone(): void {
-  //   this.textHide = this.state === "hide";
-  // }
+  public hideStart(): void {
+    this.hideCategoryTitles = this.state === 'hide';
+  }
+  
+  public hideDone(): void {
+    this.hideGameNames = this.state === 'hide';
+  }
 
-  public animationStart(): void {
-    this.textHide = this.state === "hide";
+  public showStart(): void {
+    this.hideGameNames = this.state === 'hide';
+  }
+  
+  public showDone(): void {
+    // this.hideCategoryTitles = this.state === 'hide';
   }
 }

@@ -27,6 +27,7 @@
             padding: 5px 0 0 1px;
             overflow: auto;
             height: calc(100vh - 30px - 96px);
+            overflow-x: hidden;
             /**
             * 
             */
@@ -42,6 +43,7 @@
                     border-top: 1px solid transparent;
                     color: $white;
                     text-transform: uppercase;
+                    white-space: nowrap;
                     &.hide {
                         color: transparent;
                         border-top: 1px solid $white-20;
@@ -96,6 +98,17 @@
         > .footer {
             padding: 12px 20px;
             border-top: 1px solid $white-10;
+            font-size: 16px;
+            > i {
+                &.hide {
+                    padding-right: 5px;
+                    border-right: 3px solid rgba(255,255,255,0.4);
+                }
+                &.show {
+                    padding-left: 5px;
+                    border-left: 3px solid rgba(255,255,255,0.4);
+                }
+            }
         }
     }
     /**
