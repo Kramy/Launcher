@@ -8,10 +8,11 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
     trigger('toggle', [
       state('hide', style({
-
+        width: "80px"
         // 'background-color': 'red'
       })),
       state('show', style({
+        width: "250px"
         // 'background-color': 'yellow'
       })),
       transition('show <=> hide', animate('1s ease-in-out'))
@@ -21,11 +22,13 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 export class GamesComponent implements OnInit {
   public state: string;
   public itemSelected: string = "";
+  public textHide: boolean;
 
   public icon: string = "assets/img/game.png";
 
   constructor() {
     this.state = "show";
+    this.textHide = false;
   }
 
   ngOnInit() {
@@ -39,5 +42,13 @@ export class GamesComponent implements OnInit {
   public animateMe() {
     console.log(this.state);
     this.state = (this.state === "show" ? "hide" : "show");
+  }
+
+  // public animationDone(): void {
+  //   this.textHide = this.state === "hide";
+  // }
+
+  public animationStart(): void {
+    this.textHide = this.state === "hide";
   }
 }
