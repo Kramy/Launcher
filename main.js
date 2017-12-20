@@ -24,7 +24,8 @@ exports.createWindow = (width, height, debug) => {
     icon: `file://${__dirname}/dist/favicon.ico`
   })
 
-  frame.loadURL(`file://${__dirname}/dist/index.html`)
+  // frame.loadURL(`file://${__dirname}/dist/index.html`)
+  frame.loadURL(`http://localhost:4200`)
 
   frame.on('close', () => {
     frame = null

@@ -1,57 +1,57 @@
 <div class="sidebar">
-  <div class="categories">
+  <div class="categories" [@toggle]="state === 'hide'">
     <div class="category">
-      <div class="title" [ngClass]="{'hide': minimized}">World of Warcraft</div>
+      <div class="title" [ngClass]="{'hide': state === 'hide'}">World of Warcraft</div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Classic</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Classic</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">The Burning Crusade</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">The Burning Crusade</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Wrath of the Lich King</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Wrath of the Lich King</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Cataclysm</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Cataclysm</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Mists of Pandaria</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Mists of Pandaria</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Warlords of Draenor</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Warlords of Draenor</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Legion</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Legion</a>
         </li>
       </ul>
     </div>
     <div class="category">
-      <div class="title" [ngClass]="{'hide': minimized}">Otros</div>
+      <div class="title" [ngClass]="{'hide': state === 'hide'}">Otros</div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Diablo III</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Diablo III</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g9'}" (click)="selectItem('g9')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">StarCraft II</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">StarCraft II</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g10'}" (click)="selectItem('g10')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': minimized}">Heroes of the Storm</a>
+          <a [ngClass]="{'hidden': state === 'hide'}">Heroes of the Storm</a>
         </li>
       </ul>
     </div>
   </div>
-  <div class="footer">X</div>
+  <div class="footer" (click)="animateMe()">X</div>
 </div>
 <div class="main">
   cuerpo
