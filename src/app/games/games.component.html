@@ -87,8 +87,8 @@
     </div>
   </div>
   <div class="footer" (click)="toggle()">
-    <i [ngClass]="{'hidden': state == 'hide'}" class="fa fa-chevron-left hide"></i>
-    <!-- <i [ngClass]="{'hidden': state == 'show'}" class="fa fa-chevron-right show"></i> -->
+    <i [ngClass]="{'hidden': state === 'hide'}" class="fa fa-chevron-left hide"></i>
+    <i [ngClass]="{'hidden': state === 'show'}" class="fa fa-chevron-right show"></i>
   </div>
 </div>
 <div class="main">
