@@ -8,22 +8,22 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   animations: [
     trigger('hide', [
       state('show', style({
-        width: "100%"
+        // width: "68px"
       })),
       state('hide', style({
-        width: "68px"
+        width: "100%"
       })),
       transition('show => hide', animate('250ms ease-out'))
     ]),
     trigger('show', [
       state('hide', style({
-        width: "68px"
+        // width: "68px"
       })),
       state('show', style({
-        width: "100%"
-      })),
-      transition('hide => show', animate('250ms ease-in'))
-    ])
+          width: "100%"
+        })),
+        transition('hide => show', animate('250ms ease-in'))
+      ])
   ]
 })
 export class GamesComponent implements OnInit {
@@ -32,17 +32,16 @@ export class GamesComponent implements OnInit {
   public hideCategoryTitles: boolean;
 
   public itemSelected: string;
-
-  public icon: string = "assets/img/game.png";
-
+  public icon: string;
+  
+  
   constructor() {
-    this.state = "show";
-    this.hideGameNames = true;
-    this.hideCategoryTitles = true;
   }
-
+  
   ngOnInit() {
+    this.state = "show";
     this.itemSelected = "g1";
+    this.icon = "assets/img/game.png";
   }
 
   public selectItem(item: string) {
@@ -50,15 +49,15 @@ export class GamesComponent implements OnInit {
   }
 
   public toggle() {
-    console.log(this.state);
     this.state = (this.state === "show" ? "hide" : "show");
+    console.log("Animación: " + this.state);
   }
 
-  public hideStart(): void {}
-  
-  public hideDone(): void {
+  public hideStart(): void {
     this.hideGameNames = this.state === 'hide';
   }
+  
+  public hideDone(): void {}
 
   public showStart(): void {}
   

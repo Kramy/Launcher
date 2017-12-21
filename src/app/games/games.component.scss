@@ -33,7 +33,6 @@
             */
             > .category {
                 padding: 20px 0 0 0;
-                // user-select: none;
                 /**
                 * 
                 */
@@ -47,7 +46,6 @@
                     &.hide {
                         color: transparent;
                         border-top: 1px solid $white-20;
-                        // min-height: 20px;
                     }
                 }
                 /**
