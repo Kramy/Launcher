@@ -3,7 +3,9 @@
   (@show.done)="showDone($event)" (@hide.done)="hideDone($event)">
   <div class="categories">
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">World of Warcraft</div>
+      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
+        <span [ngClass]="{'hidden': hideCategoryTitles}">World of Warcraft</span>
+      </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
@@ -36,7 +38,9 @@
       </ul>
     </div>
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">World of Warcraft</div>
+      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
+        <span [ngClass]="{'hidden': hideCategoryTitles}">World of Warcraft</span>
+      </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
@@ -69,7 +73,9 @@
       </ul>
     </div>
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">Otros</div>
+      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
+        <span [ngClass]="{'hidden': hideCategoryTitles}">Otros</span>
+      </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
           <img [src]="icon" />
