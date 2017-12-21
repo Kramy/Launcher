@@ -1,100 +1,100 @@
-<div class="sidebar" [@show]="state" [@hide]="state"
-  (@show.start)="showStart($event)" (@hide.start)="hideStart($event)"
-  (@show.done)="showDone($event)" (@hide.done)="hideDone($event)">
+<div class="sidebar"
+  [@show]="state" (@show.start)="showStart($event)" (@show.done)="showDone($event)"
+  [@hide]="state" (@hide.start)="hideStart($event)" (@hide.done)="hideDone($event)">
   <div class="categories">
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
-        <span [ngClass]="{'hidden': hideCategoryTitles}">World of Warcraft</span>
+      <div class="title" [ngClass]="{'hide': !visibleTitles}">
+        <span *ngIf="visibleTitles">World of Warcraft</span>
       </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Classic</a>
+          <a *ngIf="visibleNames">Classic</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">The Burning Crusade</a>
+          <a *ngIf="visibleNames">The Burning Crusade</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Wrath of the Lich King</a>
+          <a *ngIf="visibleNames">Wrath of the Lich King</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Cataclysm</a>
+          <a *ngIf="visibleNames">Cataclysm</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Mists of Pandaria</a>
+          <a *ngIf="visibleNames">Mists of Pandaria</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Warlords of Draenor</a>
+          <a *ngIf="visibleNames">Warlords of Draenor</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Legion</a>
+          <a *ngIf="visibleNames">Legion</a>
         </li>
       </ul>
     </div>
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
-        <span [ngClass]="{'hidden': hideCategoryTitles}">World of Warcraft</span>
+      <div class="title" [ngClass]="{'hide': !visibleTitles}">
+        <span *ngIf="visibleTitles">World of Warcraft</span>
       </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Classic</a>
+          <a *ngIf="visibleNames">Classic</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">The Burning Crusade</a>
+          <a *ngIf="visibleNames">The Burning Crusade</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Wrath of the Lich King</a>
+          <a *ngIf="visibleNames">Wrath of the Lich King</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Cataclysm</a>
+          <a *ngIf="visibleNames">Cataclysm</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Mists of Pandaria</a>
+          <a *ngIf="visibleNames">Mists of Pandaria</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Warlords of Draenor</a>
+          <a *ngIf="visibleNames">Warlords of Draenor</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Legion</a>
+          <a *ngIf="visibleNames">Legion</a>
         </li>
       </ul>
     </div>
     <div class="category">
-      <div class="title" [ngClass]="{'hide': hideCategoryTitles}">
-        <span [ngClass]="{'hidden': hideCategoryTitles}">Otros</span>
+      <div class="title" [ngClass]="{'hide': !visibleTitles}">
+        <span *ngIf="visibleTitles">Otros</span>
       </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Diablo III</a>
+          <a *ngIf="visibleNames">Diablo III</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g9'}" (click)="selectItem('g9')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">StarCraft II</a>
+          <a *ngIf="visibleNames">StarCraft II</a>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g10'}" (click)="selectItem('g10')">
           <img [src]="icon" />
-          <a [ngClass]="{'hidden': hideGameNames}">Heroes of the Storm</a>
+          <a *ngIf="visibleNames">Heroes of the Storm</a>
         </li>
       </ul>
     </div>
   </div>
   <div class="footer" (click)="toggle()">
-    <i [ngClass]="{'hidden': state === 'hide'}" class="fa fa-chevron-left hide"></i>
-    <i [ngClass]="{'hidden': state === 'show'}" class="fa fa-chevron-right show"></i>
+    <i [ngClass]="{'hidden': !visible}" class="fa fa-chevron-left hide"></i>
+    <i [ngClass]="{'hidden': visible}" class="fa fa-chevron-right show"></i>
   </div>
 </div>
 <div class="main">

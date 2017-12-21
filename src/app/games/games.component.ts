@@ -6,40 +6,43 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
   templateUrl: './games.component.html',
   styleUrls: ['./games.component.scss'],
   animations: [
+    trigger('show', [
+      state('hide', style({
+        // width: "0%"
+      })),
+      state('show', style({
+        width: "100%"
+      })),
+      transition('hide => show', animate('250ms ease-in'))
+    ]),
     trigger('hide', [
       state('show', style({
-        // width: "68px"
+        // width: "0%"
       })),
       state('hide', style({
         width: "100%"
       })),
       transition('show => hide', animate('250ms ease-out'))
-    ]),
-    trigger('show', [
-      state('hide', style({
-        // width: "68px"
-      })),
-      state('show', style({
-          width: "100%"
-        })),
-        transition('hide => show', animate('250ms ease-in'))
-      ])
+    ])
   ]
 })
 export class GamesComponent implements OnInit {
+  public visible: boolean;
+  public visibleNames: boolean;
+  public visibleTitles: boolean;
   public state: string;
-  public hideGameNames: boolean;
-  public hideCategoryTitles: boolean;
-
+  
   public itemSelected: string;
   public icon: string;
   
-  
   constructor() {
+    this.visible = true;
   }
   
   ngOnInit() {
-    this.state = "show";
+    this.state = this.visible ? "show" : "hide";
+    this.visibleNames = this.visible;
+    this.visibleTitles = this.visible;
     this.itemSelected = "g1";
     this.icon = "assets/img/game.png";
   }
@@ -49,19 +52,27 @@ export class GamesComponent implements OnInit {
   }
 
   public toggle() {
-    this.state = (this.state === "show" ? "hide" : "show");
-    console.log("Animación: " + this.state);
+    // console.log("Visible: " + this.visible + " " + this.state);
+    this.visible = !this.visible;
+    this.state = this.visible ? "show" : "hide";
+    // console.log("Visible: " + this.visible + " " + this.state);
+  }
+
+  public showStart(): void {
+    this.visibleTitles = !this.visible;
+    this.visibleNames = this.visible;
+  }
+  
+  public showDone(): void {
+    this.visibleTitles = this.visible;
   }
 
   public hideStart(): void {
-    this.hideGameNames = this.state === 'hide';
+    this.visibleTitles = this.visible;
+    // this.visibleNames = !this.visible;
   }
   
-  public hideDone(): void {}
-
-  public showStart(): void {}
-  
-  public showDone(): void {
-    this.hideCategoryTitles = this.state === 'hide';
+  public hideDone(): void {
+    this.visibleNames = this.visible;
   }
 }
