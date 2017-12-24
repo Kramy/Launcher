@@ -163,11 +163,14 @@
                 margin: 11px 0 0px 50px;
             }
             > li {
-                margin-right: 15px;
+                margin-right: 10px;
                 > a {
                     cursor: default;
                     > i {
-                        margin-right: 5px;
+                        margin: 0 5px;
+                        &:first-child {
+                            margin-left: 0;
+                        }
                     }
                 }
             }
