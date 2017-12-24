@@ -145,12 +145,11 @@
         grid-column: col-2;
         overflow: auto;
         display: grid;
-        margin-left: 50px;
         grid-template-columns: [start col-1] auto [end];
         grid-template-rows: [start row-1] auto [row-2] auto [row-3] auto [row-4] 1fr [row-5] auto [end];
         > img {
             grid-row: row-1;
-            margin-top: 5px;
+            margin: 5px 30px;
             @media (max-height: 715px) {
                 display: none;
             }
@@ -159,7 +158,10 @@
             grid-row: row-2;
             display: inline-flex;
             font-size: 0.84rem;
-            margin: 11px 0;
+            margin: 8px 0 13px 50px;
+            @media (max-height: 715px) {
+                margin: 11px 0 0px 50px;
+            }
             > li {
                 margin-right: 15px;
                 > a {
@@ -180,9 +182,9 @@
                 height: 272px;
                 width: 232px;
                 background-color: transparent;
-                margin: 10px 20px 10px 10px;
+                margin: 10px;
                 &:first-child {
-                    // margin-left: 62px;
+                    margin-left: 52px;
                 }
                 &:last-child {
                     // margin-right: 62px;
@@ -195,7 +197,7 @@
         > .play {
             display: flex;
             grid-row: row-5;
-            margin: 0 0 30px 0;
+            margin: 0 0 30px 50px;
             > button {
                 margin-right: 25px;
             }
