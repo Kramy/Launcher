@@ -8,67 +8,67 @@
       </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Classic</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Classic</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">The Burning Crusade</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">The Burning Crusade</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Wrath of the Lich King</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Wrath of the Lich King</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Cataclysm</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Cataclysm</a>
+            <div class="download">
+              <div class="state green"></div>
+            </div>
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Mists of Pandaria</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Mists of Pandaria</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Warlords of Draenor</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Warlords of Draenor</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Legion</a>
-        </li>
-      </ul>
-    </div>
-    <div class="category">
-      <div class="title" [ngClass]="{'hide': !visibleTitles}">
-        <span *ngIf="visibleTitles">World of Warcraft</span>
-      </div>
-      <ul>
-        <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Classic</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">The Burning Crusade</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Wrath of the Lich King</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Cataclysm</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Mists of Pandaria</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Warlords of Draenor</a>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Legion</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Legion</a>
+            <!-- <div class="download">
+              <div class="state"></div>
+            </div> -->
+          </div>
         </li>
       </ul>
     </div>
@@ -78,16 +78,31 @@
       </div>
       <ul>
         <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Diablo III</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Diablo III</a>
+            <div class="download">
+              <div class="state green"></div>
+            </div>
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g9'}" (click)="selectItem('g9')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">StarCraft II</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">StarCraft II</a>
+            <div class="download">
+              <div class="state yellow"></div>
+            </div>
+          </div>
         </li>
         <li [ngClass]="{'selected': itemSelected == 'g10'}" (click)="selectItem('g10')">
-          <img [src]="icon" />
-          <a *ngIf="visibleNames">Heroes of the Storm</a>
+          <div class="game">
+            <img [src]="icon" />
+            <a *ngIf="visibleNames">Heroes of the Storm</a>
+            <div class="download">
+              <div class="state red"></div>
+            </div>
+          </div>
         </li>
       </ul>
     </div>
@@ -98,8 +113,27 @@
   </div>
 </div>
 <div class="main">
-  cuerpo
-  <ul>
+  <img *ngIf="visibleLogo" [src]="classic" /> <!-- Visible a partir de 715px de alto -->
+  <ul class="options">
+    <li>
+      <a class="white"><i class="fa fa-cog yellow"></i>Opciones</a>
+    </li>
+    <li>
+      <a class="white"><i class="fa fa-check yellow"></i>Canjear código</a>
+    </li>
+  </ul>
+  <div class="news">
+    <div class="new slider"></div>
+    <div class="new"></div>
+    <div class="new"></div>
+    <div class="new"></div>
+    <div class="new"></div>
+  </div>
+  <div class="play">
+    <button class="yellow large">Jugar</button>
+    <span class="version">Versión 0.0.0.00001.</span>
+  </div>
+  <!-- <ul>
     <li>
       imagen configuracion
     </li>
@@ -115,5 +149,5 @@
     <li>
       <a class="yellow" href="#">enlace amarillo</a>
     </li>
-  </ul>
+  </ul> -->
 </div>

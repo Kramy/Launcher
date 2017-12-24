@@ -1,3 +1,32 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
+
+/**
+ * 
+ */
+ button {
+     border: 1px solid $black;
+     border-radius: 3px;
+    /*
+    *
+    */
+    &.yellow {
+        background-color: $yellow-80;
+        color: $white-80;
+        &:hover {
+            background-color: $yellow;
+            color: $white;
+        }
+        &:active {
+            background-color: $yellow-70;
+            color: $white-70;
+        }
+    }
+    &.small {}
+    &.large {
+        text-transform: uppercase;
+        font-size: 1.77rem;
+        padding: 18px 67px;
+    }
+  }

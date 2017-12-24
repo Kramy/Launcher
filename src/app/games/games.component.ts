@@ -30,10 +30,12 @@ export class GamesComponent implements OnInit {
   public visible: boolean;
   public visibleNames: boolean;
   public visibleTitles: boolean;
+  public visibleLogo: boolean;
   public state: string;
   
   public itemSelected: string;
   public icon: string;
+  public classic: string;
   
   constructor() {
     this.visible = true;
@@ -43,8 +45,10 @@ export class GamesComponent implements OnInit {
     this.state = this.visible ? "show" : "hide";
     this.visibleNames = this.visible;
     this.visibleTitles = this.visible;
+    this.visibleLogo = this.visible;
     this.itemSelected = "g1";
     this.icon = "assets/img/game.png";
+    this.classic = "assets/img/classic.png";
   }
 
   public selectItem(item: string) {

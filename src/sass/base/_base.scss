@@ -43,6 +43,7 @@ ul {
     background-color: $background-color;
     background-position: top center;
     background-repeat: no-repeat;
+    // background-image: url("assets/img/background.png");
 }
 
 /**
@@ -58,4 +59,10 @@ ul {
 a,
 img {
   -webkit-user-drag: none;
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
 }
