@@ -183,6 +183,13 @@
                 width: 232px;
                 background-color: transparent;
                 margin: 10px;
+
+                // ------ PRUEBAS ------ //
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 2rem;
+
                 &:first-child {
                     margin-left: 52px;
                 }
