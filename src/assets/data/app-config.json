@@ -1,0 +1,42 @@
+{
+    "games": {
+        "categories": {
+            "categorie": {
+                "name": "World of Warcraft",
+                "games": {
+                    "game": {
+                        "icon": "",
+                        "name": "Diablo III"
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "Starcraft II"
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "Heroes of the Storm"
+                    }
+                }
+            },
+            "categorie": {
+                "name": "Otros",
+                "games": {
+                    "game": {
+                        "icon": "",
+                        "name": "Diablo III"
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "Starcraft II"
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "Heroes of the Storm"
+                    }
+                }
+            }
+        }
+    },
+    "social": {},
+    "news": {}
+}

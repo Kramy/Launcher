@@ -5,13 +5,25 @@
 /**
  * 
  */
- button {
-     border: 1px solid $black;
-     border-radius: 3px;
+button {
+    border: 1px solid $white-20;
+    border-radius: 3px;
+    background-color: $black-10;;
+    color: $yellow-80;
+    padding: 9px 12px;
+    &:hover {
+        border-color: $white-30;
+        background-color: $black-20;
+        color: $white;
+    }
+    &:active {
+        color: $white-50;
+    }
     /*
     *
     */
     &.yellow {
+        border: none;
         background-color: $yellow-80;
         color: $white-80;
         &:hover {
@@ -20,13 +32,44 @@
         }
         &:active {
             background-color: $yellow-70;
+            box-shadow: inset 1px 1px 3px $black-20;
             color: $white-70;
         }
     }
-    &.small {}
+    /*
+    *
+    */
+    &.dark {
+        background-color: $black-30;
+        &:hover {
+            border-color: $white-20;
+            color: $yellow;
+        }
+    }
+    /*
+    *
+    */
+    &.small {
+        padding: 6px 7px 5px 8px;
+        /*
+        *
+        */
+        &:active {
+            padding: 7px 6px 4px 9px;
+        }
+    }
+    /*
+    *
+    */
     &.large {
         text-transform: uppercase;
         font-size: 1.77rem;
-        padding: 18px 67px;
+        padding: 18px 67px 18px 67px;
+        /*
+        *
+        */
+        &:active {
+            padding:  19px 66px 17px 68px;
+        }
     }
-  }
+    }

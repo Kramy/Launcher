@@ -205,14 +205,29 @@
             }
         }
         > .play {
-            display: flex;
+            display: grid;
+            grid-template-columns: [start col-1] auto [col-2] 1fr [end];
             grid-row: row-5;
-            margin: 0 0 30px 50px;
-            > button {
-                margin-right: 25px;
-            }
+            margin: 0 0 30px 51px;
             > .version {
+                margin-left: 25px;
                 align-self: flex-end;
+
+                // ------ PRUEBA ------ //
+                display: none;
+            }
+            > .download {
+                overflow: hidden;
+                display: flex;
+                align-self: center;
+                margin: 0 50px 0 61px;
+                > .progressbar {
+                    margin-right: 10px;
+                    width: 100%;
+                }
+                > button {
+                    margin-right: 7px;
+                }
             }
         }
     }

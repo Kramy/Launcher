@@ -116,10 +116,10 @@
   <img *ngIf="visibleLogo" [src]="classic" />
   <ul class="options">
     <li>
-      <a class="white"><i class="fa fa-cog yellow"></i>Opciones<i class="fa fa-angle-down"></i></a>
+      <a class="white"><i class="fa fa-cog"></i>Opciones<i class="fa fa-angle-down"></i></a>
     </li>
     <li>
-      <a class="white"><i class="fa fa-check yellow"></i>Canjear código</a>
+      <a class="white"><i class="fa fa-check"></i>Canjear código</a>
     </li>
   </ul>
   <div class="news">
@@ -131,7 +131,19 @@
   </div>
   <div class="play">
     <button class="yellow large">Jugar</button>
-    <span class="version">Versión 0.0.0.00001.</span>
+    <div class="version">Versión 0.0.0.00001.</div>
+    <div class="download">
+      <div class="progressbar">
+        <div class="label">
+          En pausa. Se guardará el progreso si sales.
+          En pausa. Se guardará el progreso si sales.
+          En pausa. Se guardará el progreso si sales.
+        </div>
+        <!-- <div class="state"></div> -->
+      </div>
+      <button class="start dark small"><i class="fa fa-play"></i></button>
+      <button class="options dark small"><i class="fa fa-cog"></i></button>
+    </div>
   </div>
   <!-- <ul>
     <li>

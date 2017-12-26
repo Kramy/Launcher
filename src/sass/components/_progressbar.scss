@@ -1,0 +1,31 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/**
+ * 
+ */
+ .progressbar {
+    overflow: auto;
+    box-shadow: inset 0 0 1px $white-50;
+    border-radius: 3px;
+    padding: 6px 6px 5px 7px;
+    color: $white;
+    position: relative;
+    // &::before {
+    //     position: absolute;
+    //     top: 0;
+    //     left: 0;
+    //     height: 100%;
+    //     width: 50%;
+    //     background-color: red;
+    //     &.green {
+
+    //     }
+    // }
+    > .label {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
