@@ -1,0 +1,52 @@
+{
+    "user": {
+        "username": "",
+        "password": "",
+        "language": ""
+    },
+    "games": {
+        "show": true,
+        "categories": {
+            "categorie": {
+                "name": "",
+                "games": {
+                    "game": {
+                        "icon": "",
+                        "name": "",
+                        "version": "",
+                        "path": "",
+                        "order": ""
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "",
+                        "version": "",
+                        "path": "",
+                        "order": ""
+                    }
+                }
+            },
+            "categorie": {
+                "name": "",
+                "games": {
+                    "game": {
+                        "icon": "",
+                        "name": "",
+                        "version": "",
+                        "path": "",
+                        "order": ""
+                    },
+                    "game": {
+                        "icon": "",
+                        "name": "",
+                        "version": "",
+                        "path": "",
+                        "order": ""
+                    }
+                }
+            }
+        }
+    },
+    "social": {},
+    "news": {}
+}
