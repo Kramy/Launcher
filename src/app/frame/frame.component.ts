@@ -10,6 +10,7 @@ import { FrameManagerService } from '../services/electron/frame-manager.service'
 export class FrameComponent implements OnInit {
 
   public focus: boolean;
+  public resizable: boolean;
 
   constructor(
     private electronService: ElectronService,
@@ -17,6 +18,7 @@ export class FrameComponent implements OnInit {
     private ref: ChangeDetectorRef,
   ) {
     this.focus = true;
+    this.resizable = true;
     
     // this.electronService.ipcRenderer.on("focus", () => {
     //   this.focus = true;

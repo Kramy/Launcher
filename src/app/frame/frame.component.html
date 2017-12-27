@@ -25,7 +25,7 @@
   </div>
 </nav>
 <ng-content select="[frame-content]"></ng-content>
-<div class="resizer">
+<div *ngIf="resizable" class="resizer">
   <div class="icon large"></div>
   <div class="icon medium"></div>
   <div class="icon small"></div>
