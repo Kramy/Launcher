@@ -12,14 +12,14 @@ let win
  * @param {int} height
  * @param {boolean} debug
  */
-exports.createWindow = (width, height, debug) => {
+exports.createWindow = (width, height, resizable, debug) => {
   var frame = new BrowserWindow({
     minWidth: width,
     width: width,
     minHeight: height,
     height: height,
     frame: false,
-    resizable: true,
+    resizable: resizable,
     show: false,
     icon: `file://${__dirname}/dist/favicon.ico`
   })
@@ -74,7 +74,7 @@ ipcMain.on("close", (event) => {
  * Once the application is fully loaded, the index frame is executed.
  */
 app.on('ready', () => {
-  win = exports.createWindow(1000, 600, true)
+  win = exports.createWindow(1000, 600, true, true)
 
   /**
      * The window is shown as soos as it's fully loaded.

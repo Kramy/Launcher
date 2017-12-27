@@ -1,52 +1,41 @@
 {
     "user": {
         "username": "",
-        "password": "",
-        "language": ""
+        "password": ""
     },
-    "games": {
-        "show": true,
-        "categories": {
-            "categorie": {
-                "name": "",
-                "games": {
-                    "game": {
-                        "icon": "",
-                        "name": "",
-                        "version": "",
-                        "path": "",
-                        "order": ""
-                    },
-                    "game": {
-                        "icon": "",
-                        "name": "",
-                        "version": "",
-                        "path": "",
-                        "order": ""
+    "aplication": {
+        "logo": "",
+        "height": "",
+        "width": "",
+        "language": "",
+        "games": {
+            "show": true,
+            "categories": {
+                "categorie": {
+                    "name": "",
+                    "games": {
+                        "game": {
+                            "icon": "",
+                            "name": "",
+                            "logo": "",
+                            "background": "",
+                            "version": "",
+                            "path": "",
+                            "order": "",
+                            "active": false,
+                            "web": ""
+                        },
+                        "game": {
+                            "...": "..."
+                        }
                     }
-                }
-            },
-            "categorie": {
-                "name": "",
-                "games": {
-                    "game": {
-                        "icon": "",
-                        "name": "",
-                        "version": "",
-                        "path": "",
-                        "order": ""
-                    },
-                    "game": {
-                        "icon": "",
-                        "name": "",
-                        "version": "",
-                        "path": "",
-                        "order": ""
-                    }
+                },
+                "categorie": {
+                    "...": "..."
                 }
             }
-        }
-    },
-    "social": {},
-    "news": {}
+        },
+        "social": {},
+        "news": {}
+    }
 }
