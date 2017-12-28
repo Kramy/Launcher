@@ -1,7 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
+import { HttpModule } from '@angular/http';
+import { APP_INITIALIZER } from '@angular/core';
 
+import { AppConfig } from './app.config';
 
 import { AppComponent } from './app.component';
 import { FrameComponent } from './frame/frame.component';
@@ -28,10 +31,13 @@ import { AppRoutingModule } from './/app-routing.module';
     BrowserModule,
     NgxElectronModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpModule
   ],
   providers: [
-    FrameManagerService
+    FrameManagerService,
+    AppConfig,
+    { provide: APP_INITIALIZER, useFactory: (config: AppConfig) => () => config.load(), deps: [AppConfig], multi: true }
   ],
   bootstrap: [
     AppComponent

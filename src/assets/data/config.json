@@ -10,11 +10,11 @@
         "language": "",
         "games": {
             "show": true,
-            "categories": {
-                "categorie": {
+            "categories": [
+                {
                     "name": "",
-                    "games": {
-                        "game": {
+                    "games": [
+                        {
                             "icon": "",
                             "name": "",
                             "logo": "",
@@ -25,15 +25,15 @@
                             "active": false,
                             "web": ""
                         },
-                        "game": {
+                        {
                             "...": "..."
                         }
-                    }
+                    ]
                 },
-                "categorie": {
+                {
                     "...": "..."
                 }
-            }
+            ]
         },
         "social": {},
         "news": {}

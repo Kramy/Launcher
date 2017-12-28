@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
+import { AppConfig } from '../app.config';
 
 @Component({
   selector: 'app-games',
@@ -37,8 +38,8 @@ export class GamesComponent implements OnInit {
   public icon: string;
   public classic: string;
   
-  constructor() {
-    this.visible = true;
+  constructor(private config: AppConfig) {
+    this.visible = config.get("aplication").games.show;
   }
   
   ngOnInit() {
