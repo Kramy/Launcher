@@ -2,105 +2,17 @@
   [@show]="state" (@show.start)="showStart($event)" (@show.done)="showDone($event)"
   [@hide]="state" (@hide.start)="hideStart($event)" (@hide.done)="hideDone($event)">
   <div class="categories">
-    <div class="category">
+    <div *ngFor="let category of games.categories" class="category">
       <div class="title" [ngClass]="{'hide': !visibleTitles}">
-        <span *ngIf="visibleTitles">World of Warcraft</span>
+        <span *ngIf="visibleTitles">{{ category.name }}</span>
       </div>
       <ul>
-        <li [ngClass]="{'selected': itemSelected == 'g1'}" (click)="selectItem('g1')">
+        <li *ngFor="let game of category.games" [ngClass]="{'selected': game.active}" (click)="selectItem(game)">
           <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Classic</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g2'}" (click)="selectItem('g2')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">The Burning Crusade</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g3'}" (click)="selectItem('g3')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Wrath of the Lich King</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g4'}" (click)="selectItem('g4')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Cataclysm</a>
-            <div class="download">
-              <div class="state green"></div>
-            </div>
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g5'}" (click)="selectItem('g5')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Mists of Pandaria</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g6'}" (click)="selectItem('g6')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Warlords of Draenor</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g7'}" (click)="selectItem('g7')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Legion</a>
-            <!-- <div class="download">
-              <div class="state"></div>
-            </div> -->
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="category">
-      <div class="title" [ngClass]="{'hide': !visibleTitles}">
-        <span *ngIf="visibleTitles">Otros</span>
-      </div>
-      <ul>
-        <li [ngClass]="{'selected': itemSelected == 'g8'}" (click)="selectItem('g8')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Diablo III</a>
-            <div class="download">
-              <div class="state green"></div>
-            </div>
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g9'}" (click)="selectItem('g9')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">StarCraft II</a>
-            <div class="download">
-              <div class="state yellow"></div>
-            </div>
-          </div>
-        </li>
-        <li [ngClass]="{'selected': itemSelected == 'g10'}" (click)="selectItem('g10')">
-          <div class="game">
-            <img [src]="icon" />
-            <a *ngIf="visibleNames">Heroes of the Storm</a>
-            <div class="download">
-              <div class="state red"></div>
+            <img [src]="game.icon" />
+            <a *ngIf="visibleNames">{{ game.name }}</a>
+            <div *ngIf="!game.update.updated" class="download">
+              <div class="state" [ngClass]="game.update.state"></div>
             </div>
           </div>
         </li>
@@ -113,13 +25,19 @@
   </div>
 </div>
 <div class="main">
-  <img *ngIf="visibleLogo" [src]="classic" />
+  <img [src]="activeGame.logo" />
   <ul class="options">
     <li>
       <a class="white"><i class="fa fa-cog"></i>Opciones<i class="fa fa-angle-down"></i></a>
     </li>
     <li>
-      <a class="white"><i class="fa fa-check"></i>Canjear código</a>
+      <a class="white"><i class="fa fa-file-text"></i>Notas de Parche</a>
+    </li>
+    <li>
+      <a class="white"><i class="fa fa-bug"></i>Bugtracker</a>
+    </li>
+    <li>
+      <a class="white"><i class="fa fa-comments"></i>Foro<i class="fa fa-external-link small"></i></a>
     </li>
   </ul>
   <div class="news">
@@ -130,8 +48,8 @@
     <div class="new">new</div>
   </div>
   <div class="play">
-    <button class="yellow large">Jugar</button>
-    <div class="version">Versión 0.0.0.00001.</div>
+    <button class="yellow large" (click)="execute(activeGame.path)">Jugar</button>
+    <div class="version">Versión {{ activeGame.version }}.</div>
     <div class="download">
       <div class="progressbar">
         <div class="label">

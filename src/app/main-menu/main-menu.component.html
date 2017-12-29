@@ -7,11 +7,14 @@
     <li class="option" (click)="selectItem('games')">
       <a [ngClass]="{'selected': itemSelected == 'games'}" routerLink="/games">Juegos</a>
     </li>
-    <li class="option" (click)="selectItem('social')">
-      <a [ngClass]="{'selected': itemSelected == 'social'}" class="disabled" routerLink="/social">Social</a>
+    <li class="option disabled" (click)="selectItem('social')">
+      <a [ngClass]="{'selected': itemSelected == 'social'}" routerLink="/social">Social</a>
     </li>
     <li class="option" (click)="selectItem('news')">
       <a [ngClass]="{'selected': itemSelected == 'news'}" routerLink="/news">Noticias</a>
+    </li>
+    <li class="option disabled" (click)="selectItem('achievements')">
+      <a [ngClass]="{'selected': itemSelected == 'achievements'}" routerLink="/achievements">Logros</a>
     </li>
   </ul>
 </nav>

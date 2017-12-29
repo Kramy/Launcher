@@ -12,26 +12,155 @@
             "show": true,
             "categories": [
                 {
-                    "name": "",
+                    "name": "World of Warcraft",
                     "games": [
                         {
-                            "icon": "",
-                            "name": "",
-                            "logo": "",
+                            "icon": "assets/img/game.png",
+                            "name": "Classic",
+                            "logo": "assets/img/classic.png",
                             "background": "",
-                            "version": "",
-                            "path": "",
-                            "order": "",
-                            "active": false,
-                            "web": ""
+                            "version": "1.12.1.5875.",
+                            "path": "C:\\Users\\rbt\\Desktop\\World of Warcraft - Classic\\WoW.exe",
+                            "active": true,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
                         },
                         {
-                            "...": "..."
+                            "icon": "assets/img/game.png",
+                            "name": "The Burning Crusade",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Wrath of the Lich King",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "order": "1",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Cataclysm",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Mists of Pandaria",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Warlords of Draenor",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Legion",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": true,
+                                "state": ""
+                            }
                         }
                     ]
                 },
                 {
-                    "...": "..."
+                    "name": "Otros",
+                    "games": [
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Diablo III",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": false,
+                                "state": "green"
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Starcraft II",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": false,
+                                "state": "yellow"
+                            }
+                        },
+                        {
+                            "icon": "assets/img/game.png",
+                            "name": "Heroes of the Storm",
+                            "logo": "",
+                            "background": "",
+                            "version": "0.0.0.00001.",
+                            "path": "",
+                            "active": false,
+                            "web": "",
+                            "update": {
+                                "updated": false,
+                                "state": "red"
+                            }
+                        }
+                    ]
                 }
             ]
         },

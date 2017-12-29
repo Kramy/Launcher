@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, state, style, transition, animate, keyframes } from '@angular/animations';
-import { AppConfig } from '../app.config';
+import { ChildProcessService } from 'ngx-childprocess';
+import { ConfigService } from '../services/aplication/config.service';
 
 @Component({
   selector: 'app-games',
@@ -31,36 +32,50 @@ export class GamesComponent implements OnInit {
   public visible: boolean;
   public visibleNames: boolean;
   public visibleTitles: boolean;
-  public visibleLogo: boolean;
   public state: string;
   
-  public itemSelected: string;
-  public icon: string;
-  public classic: string;
+  public games: any;
+  public activeGame: any;
   
-  constructor(private config: AppConfig) {
-    this.visible = config.get("aplication").games.show;
+  constructor(
+    private config: ConfigService,
+    private childProcessService: ChildProcessService
+  ) {
+    this.games = config.get("aplication").games;
+    this.visible = this.games.show;
   }
   
   ngOnInit() {
     this.state = this.visible ? "show" : "hide";
     this.visibleNames = this.visible;
     this.visibleTitles = this.visible;
-    this.visibleLogo = this.visible;
-    this.itemSelected = "g1";
-    this.icon = "assets/img/game.png";
-    this.classic = "assets/img/classic.png";
+    this.activeGame = this.getSelectedItem();
   }
 
-  public selectItem(item: string) {
-    this.itemSelected = item;
+  public selectItem(item: any): void {
+    for (let category of this.games.categories) {
+      for (let game of category.games) {
+        game.active = false;
+      }
+    }
+
+    item.active = true;
+    this.activeGame = item;
   }
 
-  public toggle() {
-    // console.log("Visible: " + this.visible + " " + this.state);
+  public getSelectedItem(): any {
+    for (let category of this.games.categories) {
+      for (let game of category.games) {
+        if (game.active) {
+          return game;
+        }
+      }
+    }
+  }
+
+  public toggle(): void {
     this.visible = !this.visible;
     this.state = this.visible ? "show" : "hide";
-    // console.log("Visible: " + this.visible + " " + this.state);
   }
 
   public showStart(): void {
@@ -74,10 +89,26 @@ export class GamesComponent implements OnInit {
 
   public hideStart(): void {
     this.visibleTitles = this.visible;
-    // this.visibleNames = !this.visible;
   }
   
   public hideDone(): void {
     this.visibleNames = this.visible;
+  }
+
+  /**
+   * 
+   * @param path 
+   */
+  public execute(path: string): void {
+    this.childProcessService.childProcess.execFile(path, null, null, (err: any, stdout: any, stderr: any) => {
+      if (err) {
+          // Ooops.
+          // console.log(stderr);
+          return console.log(err);
+      }
+
+      // Done.
+      console.log(stdout);
+    });
   }
 }
