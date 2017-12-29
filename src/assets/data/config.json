@@ -31,9 +31,9 @@
                         {
                             "icon": "assets/img/game.png",
                             "name": "The Burning Crusade",
-                            "logo": "",
+                            "logo": "assets/img/burning.png",
                             "background": "",
-                            "version": "",
+                            "version": "2.4.3.8606",
                             "path": "",
                             "active": false,
                             "web": "",

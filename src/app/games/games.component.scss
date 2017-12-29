@@ -149,7 +149,7 @@
         grid-template-rows: [start row-1] auto [row-2] auto [row-3] auto [row-4] 1fr [row-5] auto [end];
         > img {
             grid-row: row-1;
-            margin: 5px 30px;
+            margin: 5px 33px;
             @media (max-height: 715px) {
                 display: none;
             }
@@ -158,9 +158,9 @@
             grid-row: row-2;
             display: inline-flex;
             font-size: 0.84rem;
-            margin: 8px 0 13px 50px;
+            margin: 9px 0 13px 50px;
             @media (max-height: 715px) {
-                margin: 11px 0 0px 50px;
+                margin: 11px 0 0px 53px;
             }
             > li {
                 margin-right: 10px;
@@ -207,7 +207,7 @@
                 // --------------------- //
 
                 &:first-child {
-                    margin-left: 52px;
+                    margin-left: 53px;
                 }
                 &:last-child {
                     margin-right: 52px;
