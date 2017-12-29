@@ -49,8 +49,8 @@
   </div>
   <div class="play">
     <button class="yellow large" (click)="execute(activeGame.path)">Jugar</button>
-    <div class="version">Versión {{ activeGame.version }}.</div>
-    <div class="download">
+    <div *ngIf="activeGame.update.updated" class="version">Versión {{ activeGame.version }}.</div>
+    <div *ngIf="!activeGame.update.updated" class="download">
       <div class="progressbar">
         <div class="label">
           En pausa. Se guardará el progreso si sales.
