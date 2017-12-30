@@ -3,6 +3,9 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 import { ChildProcessService } from 'ngx-childprocess';
 import { ConfigService } from '../services/aplication/config.service';
 
+const tt = (<any>window).require("electron-tooltip");
+tt();
+
 @Component({
   selector: 'app-games',
   templateUrl: './games.component.html',

@@ -39,6 +39,9 @@
     <li>
       <a class="white"><i class="fa fa-comments"></i>Foro<i class="fa fa-external-link small"></i></a>
     </li>
+    <li>
+      <a data-tooltip="Test">aaaaaaa</a>
+    </li>
   </ul>
   <div class="news">
     <div class="new slider">slider</div>
@@ -48,7 +51,16 @@
     <div class="new">new</div>
   </div>
   <div class="play">
-    <button class="yellow large" (click)="execute(activeGame.path)">Jugar</button>
+    <button data-tooltip="Test" class="yellow large" [ngClass]="{'disabled': activeGame.path == ''}" (click)="execute(activeGame.path)">
+    <!-- <button class="yellow large has-tooltip" [ngClass]="{'disabled': activeGame.path == ''}" (click)="execute(activeGame.path)"> -->
+      <!-- <div class="tooltip right">
+        <div class="tooltip-arrow"></div>
+        <div class="tooltip-content">
+          <span class="tooltip-label">Jugar a {{ activeGame.name }}</span>
+        </div>
+      </div> -->
+      Jugar
+    </button>
     <div *ngIf="activeGame.update.updated && activeGame.version != ''" class="version">Versión {{ activeGame.version }}.</div>
     <div *ngIf="!activeGame.update.updated" class="download">
       <div class="progressbar">

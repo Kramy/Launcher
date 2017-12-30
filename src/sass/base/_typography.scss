@@ -26,6 +26,6 @@ body {
  * 
  */
 .disabled {
-  color: $white-20 !important;
+  opacity: 0.4;
   pointer-events: none;
 }
