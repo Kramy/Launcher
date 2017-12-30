@@ -4,7 +4,6 @@ import { ChildProcessService } from 'ngx-childprocess';
 import { ConfigService } from '../services/aplication/config.service';
 
 const tt = (<any>window).require("electron-tooltip");
-tt();
 
 @Component({
   selector: 'app-games',
@@ -53,6 +52,7 @@ export class GamesComponent implements OnInit {
     this.visibleNames = this.visible;
     this.visibleTitles = this.visible;
     this.activeGame = this.getSelectedItem();
+    tt();
   }
 
   public selectItem(item: any): void {
