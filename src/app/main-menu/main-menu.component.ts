@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfigService } from '../services/aplication/config.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,18 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.scss']
 })
 export class MainMenuComponent implements OnInit {
-  public logo: string;
   public itemSelected: string;
+  public aplication: any;
   
-  constructor() { }
+  constructor(
+    private config: ConfigService
+  ) {
+    this.aplication = config.get("aplication");
+  }
   
   ngOnInit() {
     this.itemSelected = "games";
-    this.logo = "assets/img/logo.png";
   }
 
   public selectItem(item: string) {
-    console.log(item);
     this.itemSelected = item;
   }
 }

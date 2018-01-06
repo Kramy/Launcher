@@ -3,7 +3,7 @@ import { trigger, state, style, transition, animate, keyframes } from '@angular/
 import { ChildProcessService } from 'ngx-childprocess';
 import { ConfigService } from '../services/aplication/config.service';
 
-const tooltip = (<any>window).require("electron-tooltip");
+// const tooltip = (<any>window).require("electron-tooltip");
 // const tooltip = require('../plugins/tooltip/tooltip');
 
 @Component({
@@ -53,7 +53,7 @@ export class GamesComponent implements OnInit {
     this.visibleNames = this.visible;
     this.visibleTitles = this.visible;
     this.activeGame = this.getSelectedItem();
-    tooltip();
+    // tooltip();
   }
 
   public selectItem(item: any): void {

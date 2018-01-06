@@ -48,7 +48,7 @@
     <div class="new">new</div>
   </div>
   <div class="play">
-    <button data-tooltip="Jugar" data-tooltip-position="right" class="yellow xl" [ngClass]="{'disabled': activeGame.path == ''}" (click)="execute(activeGame.path)">
+    <button class="yellow xl" [ngClass]="{'disabled': activeGame.path == ''}" (click)="execute(activeGame.path)">
     <!-- <button class="yellow large has-tooltip" [ngClass]="{'disabled': activeGame.path == ''}" (click)="execute(activeGame.path)"> -->
       <!-- <div class="tooltip right">
         <div class="tooltip-arrow"></div>
