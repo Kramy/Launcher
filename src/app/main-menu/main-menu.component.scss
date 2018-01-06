@@ -1,43 +1,87 @@
 @import '~sass/abstracts/variables';
 
 nav {
+    display: grid;
+    grid-template-columns: [start col-1] auto [col-2] auto [end];
+    grid-template-rows: [start row-1] auto [end];
     min-height: 50px;
-    > ul {
-        display: inline-flex;
-        cursor: default;
-        margin: 0px 12px 7px 16px;
-        > li {
-            font-size: 1.30rem;
-            -webkit-app-region: no-drag;
-            text-transform: uppercase;
-            color: $white-40;
-            &:hover {
-                color: $white-80;
-            }
-            &.config {
-                padding: 0 25px 0 8px;
+    > .app-options {
+        display: flex;
+        justify-content: flex-start;
+        > ul {
+            display: inline-flex;
+            cursor: default;
+            margin: 0px 12px 7px 16px;
+            > li {
+                font-size: 1.30rem;
+                -webkit-app-region: no-drag;
+                text-transform: uppercase;
+                color: $white-40;
                 &:hover {
-                    // text-shadow: 0 0 20px $white;
+                    color: $white-80;
                 }
-                > img {
-                    height: 100%;
-                    width: 71px;
-                    background-size: contain;
-                    vertical-align: middle;
+                &.config {
+                    padding: 0 20px 0 8px;
+                    &:hover {
+                        // text-shadow: 0 0 20px $white;
+                    }
+                    > img {
+                        height: 100%;
+                        width: 71px;
+                        background-size: contain;
+                        vertical-align: middle;
+                    }
+                    > i {
+                        // padding: 0 5px;
+                    }
                 }
-                > i {
-                    // padding: 0 5px;
+                &.option {
+                    margin: 10px 25px 10px 5px;
+                    line-height: 1;
+                }
+                > a {
+                    cursor: default;
+                    transition: color 0.5s;
+                    &.selected {
+                        text-shadow: 0 0 20px $white;
+                    }
                 }
             }
-            &.option {
-                margin: 10px;
-                line-height: 1;
-            }
-            > a {
-                cursor: default;
-                transition: color 0.5s;
-                &.selected {
-                    text-shadow: 0 0 20px $white;
+        }
+    }
+    > .user-options {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        > .login {
+            margin-right: 30px;
+        }
+        > ul {
+            display: inline-flex;
+            cursor: default;
+            margin: 6px 13px 12px 13px;
+            align-items: center;
+            > li{
+                border: 1px solid $white-20;
+                border-left: none;
+                padding: 0 10px;
+                > a {
+                    position: relative;
+                    line-height: 30px;
+                    > img {
+                        &.avatar {
+                            position: absolute;
+                            top: -5px;
+                            left: -42px;
+                            height: 40px;
+                            width: 40px;
+                            border-radius: 20px;
+                            border: 1px solid $white-20;
+                        }
+                    }
+                    > .user {
+                        margin-left: 6px;
+                    }
                 }
             }
         }

@@ -6,6 +6,7 @@
  * 
  */
 button {
+    text-transform: capitalize;
     border: 1px solid $white-20;
     border-radius: 3px;
     background-color: $black-10;;
@@ -49,27 +50,57 @@ button {
     /*
     *
     */
-    &.small {
-        padding: 6px 7px 5px 8px;
+    &.sm {
+        font-size: 0.8rem;
+        line-height: 18px;
+        padding: 0 8px;
         /*
         *
         */
         &:active {
-            padding: 7px 6px 4px 9px;
+            // padding: 7px 6px 4px 9px;
         }
     }
     /*
     *
     */
-    &.large {
-        text-transform: uppercase;
-        font-size: 1.77rem;
-        padding: 18px 67px 18px 67px;
+    &.md {
+        font-size: 1.8rem;
+        line-height: 68px;
+        padding: 0px 67px;
         /*
         *
         */
         &:active {
-            padding:  19px 66px 17px 68px;
+            // padding:  19px 66px 17px 68px;
         }
     }
+    /*
+    *
+    */
+    &.lg {
+        font-size: 1.8rem;
+        line-height: 68px;
+        padding: 0px 67px;
+        /*
+        *
+        */
+        &:active {
+            // padding:  19px 66px 17px 68px;
+        }
     }
+    /*
+    *
+    */
+    &.xl {
+        font-size: 1.8rem;
+        line-height: 68px;
+        padding: 0px 79px;
+        /*
+        *
+        */
+        &:active {
+            // padding:  19px 66px 17px 68px;
+        }
+    }
+}

@@ -1,20 +1,35 @@
 <nav class="main-menu">
-  <ul>
-    <li class="config">
-      <img [src]="logo" title="logo"/>
-      <i class="fa fa-angle-down"></i>
-    </li>
-    <li class="option" (click)="selectItem('games')">
-      <a [ngClass]="{'selected': itemSelected == 'games'}" routerLink="/games">Juegos</a>
-    </li>
-    <li class="option disabled" (click)="selectItem('social')">
-      <a [ngClass]="{'selected': itemSelected == 'social'}" routerLink="/social">Social</a>
-    </li>
-    <li class="option" (click)="selectItem('news')">
-      <a [ngClass]="{'selected': itemSelected == 'news'}" routerLink="/news">Noticias</a>
-    </li>
-    <li class="option disabled" (click)="selectItem('achievements')">
-      <a [ngClass]="{'selected': itemSelected == 'achievements'}" routerLink="/achievements">Logros</a>
-    </li>
-  </ul>
+  <div class="app-options">
+    <ul>
+      <li class="config">
+        <img [src]="logo" title="logo"/>
+        <i class="fa fa-angle-down"></i>
+      </li>
+      <li class="option" (click)="selectItem('games')">
+        <a [ngClass]="{'selected': itemSelected == 'games'}" routerLink="/games">Juegos</a>
+      </li>
+      <li class="option disabled" (click)="selectItem('social')">
+        <a [ngClass]="{'selected': itemSelected == 'social'}" routerLink="/social">Social</a>
+      </li>
+      <li class="option" (click)="selectItem('news')">
+        <a [ngClass]="{'selected': itemSelected == 'news'}" routerLink="/news">Noticias</a>
+      </li>
+      <li class="option disabled" (click)="selectItem('achievements')">
+        <a [ngClass]="{'selected': itemSelected == 'achievements'}" routerLink="/achievements">Logros</a>
+      </li>
+    </ul>
+  </div>
+  <div class="user-options">
+    <div class="login">
+      <button class="yellow sm">Conectarse</button>
+    </div>
+    <ul>
+      <li>
+        <a>
+          <img class="avatar" />
+          <div class="user">Synove</div>
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
