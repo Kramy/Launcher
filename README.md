@@ -1,6 +1,8 @@
 # Documentation
 Application launcher developed under electron and angular technology.
 
+To run it, simply set 'ng serve' & 'npm run electron'.
+
 # Electron
 - Web: https://electronjs.org/
 
