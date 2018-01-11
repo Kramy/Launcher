@@ -24,11 +24,27 @@
       <button class="yellow sm">Conectarse</button>
     </div>
     <ul>
-      <li>
-        <a>
-          <img class="avatar" />
-          <div class="user">Synove</div>
+      <!-- <li> -->
+        <!-- <a> -->
+          <!-- <img src="http://vignette3.wikia.nocookie.net/wowwiki/images/e/e2/Ragnaros_the_Firelord.png/revision/latest?cb=20110617044003" class="avatar" /> -->
+          <!-- <img src="" class="avatar" /> -->
+          <!-- <div class="user"> {{ user.username }} </div> -->
+        <!-- </a> -->
+      <!-- </li> -->
+      <li style="width: 88px;">
+        <div class="avatar">
+          <img [src]="avatar" title="avatar">
+        </div>
+        <a class="user">
+          {{ user.username }}
+          <i class="fa fa-angle-down"></i>
         </a>
+      </li>
+      <li style="width: 44px;">
+        <a><i class="fa fa-video-camera"></i></a>
+      </li>
+      <li style="width: 54px;">
+        <a><i class="fa fa-user"></i></a>
       </li>
     </ul>
   </div>

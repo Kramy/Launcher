@@ -20,15 +20,15 @@ export class FrameComponent implements OnInit {
     this.focus = true;
     this.resizable = true;
     
-    // this.electronService.ipcRenderer.on("focus", () => {
-    //   this.focus = true;
-    //   ref.detectChanges();
-    // });
+    this.electronService.ipcRenderer.on("focus", () => {
+      this.focus = true;
+      ref.detectChanges();
+    });
 
-    // this.electronService.ipcRenderer.on("blur", () => {
-    //   this.focus = false;
-    //   ref.detectChanges();
-    // });
+    this.electronService.ipcRenderer.on("blur", () => {
+      this.focus = false;
+      ref.detectChanges();
+    });
     
   }
 
